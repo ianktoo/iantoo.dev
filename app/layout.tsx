@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/next";
 import { NavBar } from "@/components/layout/NavBar";
 import { Footer } from "@/components/layout/Footer";
 import { ScanlineOverlay } from "@/components/terminal/ScanlineOverlay";
@@ -47,6 +48,7 @@ export default function RootLayout({
           <main className="flex-1 pt-12">{children}</main>
           <Footer />
           <AIChatWidget />
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
